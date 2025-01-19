@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./image.png">
+    <title>MITHUN REVANTH TADIKAMALLA Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="welcome-screen">
+        <h1 style="color: black;">WELCOME TO MY PORTFOLIO SITE</h1>
+      </div>
+    
+    <header>
+        <div class="container">
+            <div class="icon-container">
+                <div class="diamond-wrapper"> <div class="diamond-icon">💎</div></div>
+
+                <div class="icon-line"></div>
+            </div>
+            <div class="line"></div>
+            <h1>MITHUN REVANTH TADIKAMALLA </h1>
+            <h1 style="color: #6A0DAD;">Student</h1>
+            <p class="welcome">WELCOME TO MY PORTFOLIO SITE</p>
+            <p class="instruction" style="color: rgb(102, 255, 0);">PLEASE SELECT THE RESPECTIVE SECTION YOU'D LIKE TO SEE IN THE BELOW SELECTIONS.</p>
+            <nav>
+                <a href="./intro.html">About Me</a>
+                <!-- <a href="./aboutme.html">About Me</a> -->
+                <a href="./projext.html">Achievement</a>
+                <!-- <a href="./resume.html">RESUME</a> -->
+                <a href="./Contact Me.html">Contact Me</a>
+            </nav>
+            <div class="line"></div>
+            <p class="tagline" >THINK. WORK. WIN.</p>
+        </div>
+    </header>
+    <script>
+        
+    if (!sessionStorage.getItem('welcomeShown')) {
+      setTimeout(() => {
+        document.getElementById('welcome-screen').style.display = 'none'; 
+        sessionStorage.setItem('welcomeShown', true);
+        window.location.reload();
+      }, 3000);
+    } else {
+      document.getElementById('welcome-screen').style.display = 'none';
+      document.getElementById('container').style.display = 'block';
+    }
+
+
+    
+      </script> 
+    
+</body>
+</html>

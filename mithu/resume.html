@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./passport_photo1.png">
+    <title>Sai Venkata Manieswar | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-image: url('back.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-weight: 300;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7); 
+        }
+
+        .modal-content {
+            background-color: #222; 
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #555;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        img{
+          
+            box-shadow: 1px 1px 10px 3px rgb(7, 150, 2)
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .resume-icon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .resume-icon img {
+            width: 100px; 
+            height: 100px;
+            filter: invert(1); 
+        }
+        ::-moz-selection { 
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+h2{
+    text-decoration: underline;
+            text-underline-offset: 10px; 
+            text-decoration-thickness: 3.1px; 
+}
+     .overview {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .complete-resume {
+            text-align: center;
+        }
+        .complete-resume:hover{
+            button:hover{
+    cursor: pointer;
+}
+        }
+        a:hover{
+        
+    cursor: pointer;
+    background: linear-gradient(180deg, #6A0DAD, #9A4DFF);
+         border: 2px  white solid;
+            box-shadow: 1px 1px 10px 3px  #6A0DAD;
+}
+        
+        .complete-resume a{
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+                max-width: unset; 
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            img {
+                margin: auto;
+                width: 350px; 
+            }
+
+            .social-icons {
+                flex-wrap: wrap; 
+            }
+        }
+    
+    </style>
+</head>
+<body>
+
+    <button id="openModal" style="display: none;">Open Resume</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>RESUME</h2>
+            <div class="resume-icon">
+                <img src="./resume.png" alt="Resume Icon">
+            </div>
+            <div class="overview">
+                Over view : To explore my skills, projects, and professional background in detail, please refer to my resume.
+            </div>
+            <div class="complete-resume">
+                <a href="./company_resume.pdf" target="_blank"> Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("myModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            modal.style.display = "block";
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+            window.location.href = "index.html"
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                window.location.href = "index.html"
+            }
+        }
+    </script>
+
+</body>
+</html>
